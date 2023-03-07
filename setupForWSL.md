@@ -60,6 +60,7 @@ Now if you are on WSL, there's an extra step here. Follow the guidelines outline
 ### Useful functions from this link
 ```usbipd wsl list```
 ```usbipd wsl attach --busid <busID>```
+```usbipd wsl detach --busid <busid>```
 
 
 Then run OpenOCD 'server' ready to attach GDB to:
