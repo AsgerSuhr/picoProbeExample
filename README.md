@@ -27,28 +27,6 @@ We also need to install the GNU debugger (GDB)
 Install gdb-multiarch.
 ```sudo apt install gdb-multiarch```
 
-If you are getting any errors looking like this when starting the GDB server
-```Reading symbols from objdump-multiarch --syms -C -h -w /home/silverglade303/pico/CapstoneAmmeter/build/ADCTest/ADCTest.elf
-Reading symbols from nm-multiarch --defined-only -S -l -C -p /home/silverglade303/pico/CapstoneAmmeter/build/ADCTest/ADCTest.elf
-Launching GDB: gdb-multiarch -q --interpreter=mi2 /home/silverglade303/pico/CapstoneAmmeter/build/ADCTest/ADCTest.elf
-    Set "showDevDebugOutput": true in your "launch.json" to see verbose GDB transactions here. Helpful to debug issues or report problems
-Error: nm-multiarch failed! statics/global/functions may not be properly classified: Error: spawn nm-multiarch ENOENT
-    Expecting `nm` next to `objdump`. If that is not the problem please report this.
-Error: objdump failed! statics/globals/functions may not be properly classified: Error: spawn objdump-multiarch ENOENT    ENOENT means program not found. If that is not the issue, please report this problem.Launching gdb-server: openocd -c "gdb_port 50003" -c "tcl_port 50004" -c "telnet_port 50005" -s /home/silverglade303/pico/CapstoneAmmeter -f /home/silverglade303/.vscode/extensions/marus25.cortex-debug-1.4.4/support/openocd-helpers.tcl -f interface/raspberrypi-swd.cfg -f target/rp2040.cfg
-    Please check TERMINAL tab (gdb-server) for output from openocd
-Finished reading symbols from objdump: Time: 166 ms
-Finished reading symbols from nm: Time: 157 ms
-OpenOCD GDB Server Quit Unexpectedly. See gdb-server output for more details.
-```
-
-these commands might resolve that issue:
-```sudo apt update
-sudo apt install binutils-multiarch
-cd /usr/bin
-ln -s /usr/bin/objdump objdump-multiarch
-ln -s /usr/bin/nm nm-multiarch
-```
-
 ## Uploading new programs to your Pico
 
 The Pico Debug Probe will let you load binaries via the SWD port and OpenOCD: you will not need to unplug, and then push-and-hold, the BOOTSEL button every time you push a new binary to your Pico. Using the Debug Probe uploading new binaries is an entirely hands off affair.
