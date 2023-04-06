@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-# picoProbeExample
-example project of using the picoprobe in WSL2 
-=======
 # Setting up the picoprobe on Windows Subsystem for Linux (WSL)
 
 Basically follow the online guide https://www.raspberrypi.com/documentation/microcontrollers/debug-probe.html, 
@@ -61,6 +57,12 @@ See chapter Chapter 6 of Getting started with Raspberry Pi Pico for more informa
 
 Now if you are on WSL, there's an extra step here. Follow the guidelines outlined here https://learn.microsoft.com/en-us/windows/wsl/connect-usb 
 
+### Useful functions from this link
+```usbipd wsl list```
+```usbipd wsl attach --busid <busID>```
+```usbipd wsl detach --busid <busid>```
+
+
 Then run OpenOCD 'server' ready to attach GDB to:
 ```$ sudo openocd -f interface/cmsis-dap.cfg -f target/rp2040.cfg -c "adapter speed 5000"```
 
@@ -115,5 +117,5 @@ if the service isn't running, start it with
 otherwise
 ```sudo udevadm control --reload-rules```
 
+
 Now it should work in VScode, try out the Cortex Debugger.
->>>>>>> master
