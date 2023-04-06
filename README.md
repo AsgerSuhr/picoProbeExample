@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-# picoProbeExample
-example project of using the picoprobe in WSL2 
-=======
 # Setting up the picoprobe on Windows Subsystem for Linux (WSL)
 
 Basically follow the online guide https://www.raspberrypi.com/documentation/microcontrollers/debug-probe.html, 
