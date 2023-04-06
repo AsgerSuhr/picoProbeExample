@@ -112,4 +112,3 @@ otherwise
 ```sudo udevadm control --reload-rules```
 
 Now it should work in VScode, try out the Cortex Debugger.
->>>>>>> master
