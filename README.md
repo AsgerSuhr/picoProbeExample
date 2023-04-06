@@ -38,14 +38,9 @@ Error: objdump failed! statics/globals/functions may not be properly classified:
     Please check TERMINAL tab (gdb-server) for output from openocd
 Finished reading symbols from objdump: Time: 166 ms
 Finished reading symbols from nm: Time: 157 ms
-OpenOCD GDB Server Quit Unexpectedly. See gdb-server output for more details.```
+OpenOCD GDB Server Quit Unexpectedly. See gdb-server output for more details.
+```
 
-these commands might resolve that issue:
-```sudo apt update
-sudo apt install binutils-multiarch
-cd /usr/bin
-ln -s /usr/bin/objdump objdump-multiarch
-ln -s /usr/bin/nm nm-multiarch```
 
 ## Uploading new programs to your Pico
 
